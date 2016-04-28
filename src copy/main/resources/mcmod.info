@@ -1,0 +1,16 @@
+[
+{
+  "modid": "antilight",
+  "name": "Antilight: Darkness Evolved",
+  "description": "Be afraid of the night no longer!",
+  "version": "${version}",
+  "mcversion": "1.8",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [ "tubers" ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

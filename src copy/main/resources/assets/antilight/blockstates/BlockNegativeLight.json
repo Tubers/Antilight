@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": {
+      "model": "antilight:BlockNegativeLight",
+      "textures": {
+        "all": "antilight:blocks/BlockNegativeLight"
+      }
+    }
+  }
+}
