@@ -1,6 +1,10 @@
 package com.tubers.antilight;
 
 
+
+
+import net.minecraft.item.Item;
+
 import java.util.Locale;
 
 public class References {
@@ -20,6 +24,20 @@ public class References {
 
     public enum AntilightItem
     {
+        TEST_ITEM("TestItem");
+
+        private final String regName;
+
+        public String getRegName()
+        {
+            return regName;
+        }
+
+        AntilightItem(String regName)
+        {
+            this.regName = regName;
+        }
+
 
     }
 

@@ -1,5 +1,6 @@
-package com.tubers.antilight.block;
+package com.tubers.antilight.registry;
 
+import com.tubers.antilight.block.NegativeLight;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockRegister {

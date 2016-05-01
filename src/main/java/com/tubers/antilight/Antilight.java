@@ -1,7 +1,6 @@
 package com.tubers.antilight;
 
-import com.tubers.antilight.block.BlockRegister;
-import com.tubers.antilight.block.NegativeLight;
+import com.tubers.antilight.registry.BlockRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
@@ -10,18 +9,16 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
-import java.io.FileOutputStream;
 
-
-@Mod(modid = "antilight", name = "Antilight: Darkness Evolved", version = "1.0")
+@Mod(modid = References.Mod.MODID, name = References.Mod.NAME, version = References.Mod.VERSION)
 public class Antilight
 {
 
-    @Mod.Instance("antilight")
+    @Mod.Instance(References.Mod.MODID)
     public static Antilight instance;
 
 
-    public static CreativeTabs tabAntilight = new CreativeTabs("antilight.creativeTab")
+    public static CreativeTabs tabAntilight = new CreativeTabs(References.Mod.MODID+".creativeTab")
     {
         @Override
         public Item getTabIconItem()
