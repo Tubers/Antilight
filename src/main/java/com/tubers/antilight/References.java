@@ -15,6 +15,8 @@ public class References {
         public static final String DOMAIN = MODID.toLowerCase(Locale.ENGLISH) + ":";
         public static final String NAME = "Antilight: Darkness Evolved";
         public static final String VERSION = "1.0";
+        public static final String CLIENT_PROXY = "com.tubers.antilight.proxy.ClientProxy";
+        public static final String COMMON_PROXY = "com.tubers.antilight.proxy.CommonProxy";
     }
 
     public static final class Gui
@@ -36,6 +38,11 @@ public class References {
         AntilightItem(String regName)
         {
             this.regName = regName;
+        }
+
+        public Item getItem()
+        {
+            return AntilightAPI.getItem(getRegName());
         }
 
 
