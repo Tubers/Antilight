@@ -3,6 +3,7 @@ package com.tubers.antilight;
 
 
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 import java.util.Locale;
@@ -26,7 +27,7 @@ public class References {
 
     public enum AntilightItem
     {
-        TEST_ITEM("TestItem");
+        TEST_ITEM("TestItem"); // registry name
 
         private final String regName;
 
@@ -50,7 +51,24 @@ public class References {
 
     public enum AntilightBlock
     {
+        TEST_BLOCK("TestBlock"); // registry name
 
+        private final String regName;
+
+        public String getRegName()
+        {
+            return regName;
+        }
+
+        AntilightBlock(String regName)
+        {
+            this.regName = regName;
+        }
+
+        public Block getBlock()
+        {
+            return AntilightAPI.getBlock(getRegName());
+        }
     }
 
 

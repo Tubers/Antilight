@@ -1,10 +1,13 @@
 package com.tubers.antilight;
 
+import com.tubers.antilight.network.PacketHandler;
 import com.tubers.antilight.proxy.CommonProxy;
 import com.tubers.antilight.registry.BlockRegister;
 import com.tubers.antilight.registry.ItemRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -29,19 +32,25 @@ public class Antilight
         @Override
         public Item getTabIconItem()
         {
-            return Item.getItemById(0);
+            return ItemRegister.Test_Item;
         }
     };
+
+    private Configuration config;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         ItemRegister.init();
+        BlockRegister.init();
+
+        CommonProxy.preInit();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        PacketHandler.init();
         proxy.registerRenders();
     }
 

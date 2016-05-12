@@ -10,21 +10,23 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemRegister {
 
-    public static Item test_Item;
+    public static Item Test_Item;
 
     public static void init ()
     {
-        test_Item = registerItem(new TestItem());
+        Test_Item = registerItem(new TestItem());
     }
 
     public static void initRenders()
     {
-        registerRender(test_Item);
+        registerRender(Test_Item);
     }
 
     public static void registerRender(Item item)
     {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(References.Mod.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+        System.out.println(item.getClass().getSimpleName());
+
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(References.Mod.MODID + ":" + item.getUnlocalizedName().split("\\.")[2], "inventory"));
     }
 
     private static Item registerItem(Item item)
